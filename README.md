@@ -1,12 +1,46 @@
-# React + Vite
+# Mehendi by Heba
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A beautiful and responsive Mehendi portfolio website built using **React**, **Vite**, and **Web3Forms**. The website includes a stunning gallery, an about section, and a working contact form.
 
-Currently, two official plugins are available:
+## 🔗 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Click here to visit the website](https://mehendi-website-reactjs-c7ce.vercel.app/)
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+---
+
+## 🚀 Features
+
+- Responsive and modern design
+- Interactive image gallery with hover effects
+- Web3Forms contact form integration
+- Smooth scrolling and CSS animations
+
+---
+
+## 🛠 Tech Stack
+
+- React
+- Vite
+- CSS3
+- Web3Forms
+
+---
+
+## 🧑‍💻 Getting Started
+
+```bash
+git clone https://github.com/Alfiya-heba/Mehendi-Website-Reactjs.git
+cd Mehendi-Website-Reactjs
+npm install
+npm run dev
+
+
+
+ **Save it**, then run these commands in terminal:
+
+```bash
+git add README.md
+git commit -m "Added README file"
+git push origin main
