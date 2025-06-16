@@ -1,0 +1,39 @@
+.title {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 70px 0 30px;
+  }
+  
+  .title p {
+    font-size: 32px;
+    margin-top: 5px;
+    text-transform: none;
+    color: #4b1e0e;
+    font-weight: bold;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .title {
+      font-size: 14px;
+      margin: 50px 0 25px;
+    }
+  
+    .title p {
+      font-size: 26px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 13px;
+      margin: 40px 0 20px;
+    }
+  
+    .title p {
+      font-size: 22px;
+    }
+  }
+  

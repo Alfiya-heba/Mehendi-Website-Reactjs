@@ -1,0 +1,205 @@
+.bookings-section {
+    padding: 80px 20px;
+    background-color: #fff8f3;
+    font-family: 'Segoe UI', sans-serif;
+    color: #4b1e0e;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .bookings-content {
+    max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 40px 30px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bookings-content h2 {
+    font-size: 32px;
+    color: #8b2f16;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .bookings-content p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  
+  .bookings-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .bookings-content li {
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+  
+  .bookings-content a {
+    color: #8b2f16;
+    text-decoration: none;
+  }
+  
+  .bookings-content a:hover {
+    text-decoration: underline;
+  }
+  
+  .booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .booking-form input,
+  .booking-form textarea {
+    padding: 12px 15px;
+    border: 1px solid #d5b39e;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #fffaf7;
+    color: #4b1e0e;
+    outline: none;
+  }
+  
+  .booking-form input:focus,
+  .booking-form textarea:focus {
+    border-color: #8b2f16;
+    box-shadow: 0 0 0 2px rgba(139, 47, 22, 0.1);
+  }
+  
+  .booking-form button {
+    padding: 12px;
+    background-color: #8b2f16;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .booking-form button:hover {
+    background-color: #722613;
+  }
+  
+  .booking-form button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .result-message {
+    display: block;
+    margin-top: 15px;
+    color: green;
+    text-align: center;
+    font-weight: 500;
+    font-size: 15px;
+  }
+  
+  .whatsapp-link {
+    text-align: center;
+    margin-top: 25px;
+  }
+  
+  .whatsapp-link p {
+    margin-bottom: 8px;
+    color: #4b1e0e;
+    font-size: 15px;
+  }
+  
+  .whatsapp-btn {
+    display: inline-block;
+    background-color: #25d366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .whatsapp-btn:hover {
+    background-color: #1ebe5c;
+  }
+  /* Animate On Scroll */
+[data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+  }
+  [data-aos].aos-animate {
+    opacity: 1;
+  }
+  
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .bookings-content {
+      padding: 25px 20px;
+    }
+  
+    .bookings-content h2 {
+      font-size: 26px;
+    }
+  
+    .bookings-content p {
+      font-size: 15px;
+    }
+  
+    .booking-form button {
+      font-size: 14px;
+    }
+  }
+  
+  /* Popup overlay */
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Popup content */
+  .popup-box {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #4b1e0e;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .popup-box h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  
+  .popup-box p {
+    font-size: 16px;
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
