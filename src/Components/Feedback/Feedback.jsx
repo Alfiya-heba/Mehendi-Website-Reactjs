@@ -10,7 +10,7 @@ const Feedback = () => {
     setResult('Sending...');
 
     const formData = new FormData(e.target);
-    formData.append('access_key', '149c4495-4ade-4382-b148-d350ab21f542');
+    formData.append('access_key', import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
     formData.append('subject', 'New Feedback Received from Mehendi Website');
     formData.append('from_name', 'Mehendi by Heba - Feedback Form');
 

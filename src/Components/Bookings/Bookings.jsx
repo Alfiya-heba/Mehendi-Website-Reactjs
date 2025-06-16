@@ -31,7 +31,7 @@ const Bookings = () => {
     setLoading(true);
     setResult('');
 
-    formData.append('access_key', '149c4495-4ade-4382-b148-d350ab21f542');
+    formData.append('access_key', import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
 
     // Set up auto-reply to the customer
     formData.append('replyto', formData.get('email')); // their email
