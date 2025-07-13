@@ -28,6 +28,7 @@ const Navbar = () => {
         <li><a href="#feedback" onClick={closeMenu}>Feedback</a></li>
       </ul>
     </nav>
+    // <hr />
   );
 };
 
