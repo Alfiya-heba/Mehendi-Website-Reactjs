@@ -5,21 +5,29 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+    setMenuOpen(prev => !prev);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
   };
 
   return (
-    <nav class="navbar">
-  <div class="logo">Welcome to <span>Mehendi by Heba</span></div>
-  <div class="hamburger" onclick="toggleSidebar()">☰</div>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#gallery">Gallery</a></li>
-    <li><a href="#about">About Me</a></li>
-    <li><a href="#bookings">Bookings</a></li>
-    <li><a href="#feedback">Feedback</a></li>
-  </ul>
-</nav>
+    <nav className="navbar">
+      <div className="logo">Welcome to <span>Mehendi by Heba</span></div>
+
+      <div className="hamburger" onClick={toggleMenu}>
+        ☰
+      </div>
+
+      <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
+        <li><a href="#home" onClick={closeMenu}>Home</a></li>
+        <li><a href="#gallery" onClick={closeMenu}>Gallery</a></li>
+        <li><a href="#about" onClick={closeMenu}>About Me</a></li>
+        <li><a href="#bookings" onClick={closeMenu}>Bookings</a></li>
+        <li><a href="#feedback" onClick={closeMenu}>Feedback</a></li>
+      </ul>
+    </nav>
   );
 };
 
