@@ -102,6 +102,15 @@
   color: #4b1e0e;
   font-weight: 500;
 }
+.feedback-section {
+  min-height: 100vh;
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #fff6f0, #fde8dc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 /* Popup */
 .popup-overlay {
@@ -182,3 +191,10 @@
     padding: 25px 18px;
   }
 }
+@media screen and (max-width: 600px) {
+  .feedback-section {
+    min-height: auto;
+    padding: 50px 15px 40px;
+  }
+}
+

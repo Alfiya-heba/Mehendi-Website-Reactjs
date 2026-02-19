@@ -151,7 +151,8 @@
 
 @media screen and (max-width: 600px) {
   .about {
-    margin: 70px 20px;
+    margin: 35px 15px;   /* 🔥 was 100px */
+    gap: 25px;
   }
 
   .about h2 {
@@ -163,14 +164,7 @@
   }
 
   .why-choose-me {
-    padding: 22px;
-  }
-
-  .why-choose-me h3 {
-    font-size: 20px;
-  }
-
-  .why-choose-me li {
-    font-size: 14.5px;
+    margin-top: 20px;
+    padding: 20px;
   }
 }

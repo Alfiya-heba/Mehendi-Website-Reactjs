@@ -1,106 +1,156 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
-  
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
-body{
-    background-color:#F5F5F5 ;
-}
-a{
-    text-decoration: none;
-    color:inherit;
-    line-height: 1;
-    cursor: pointer;
-}
-.container{
-    padding-left: 5%;
-    padding-right: 5%;
-}
-.btn{
-    background:#4b1e0e;
-    color:#FFF;
-    padding:10px 24px;
-    font-size: 16px;
-    border-radius: 30px;
-    cursor: pointer;
-    border: 0;
-    outline: 0;
-    transition: background 0.3s ease;
-}
+
 html {
-    scroll-behavior: smooth;
-  }
-  
-/* Navbar styles */
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff; /* 🔥 important to avoid fake gaps */
+  color: #4b1e0e;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/* ================= BUTTON ================= */
+.btn {
+  background: #4b1e0e;
+  color: #ffffff;
+  padding: 12px 26px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #932b2b;
+  transform: translateY(-2px);
+}
+
+/* ================= GLOBAL SECTION SPACING ================= */
+/* 🔥 This fixes spacing issue everywhere */
+section,
+.about,
+.bookings-section,
+.feedback-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  scroll-margin-top: 80px; /* navbar offset */
+}
+
+/* ================= NAVBAR ================= */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #fcf9e5;
-    padding: 15px 20px;
-    position: relative;
-  }
-  
-  .logo {
-    font-size: 22px;
-    font-weight: bold;
-    color: #4b1e0e;
-  }
-  .logo span {
-    color: #b23a48;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fcf9e5;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #4b1e0e;
+}
+
+.logo span {
+  color: #b23a48;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+}
+
+.nav-links li a {
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links li a:hover {
+  color: #b23a48;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #4b1e0e;
+}
+
+/* ================= MOBILE NAV ================= */
+@media (max-width: 768px) {
   .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 240px;
+    background: #fff3e6;
+    flex-direction: column;
+    padding: 70px 20px;
+    gap: 25px;
+    transition: right 0.3s ease;
+    box-shadow: -2px 0 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
   }
-  
-  .nav-links li a {
-    color: #4b1e0e;
-    font-weight: 500;
+
+  .nav-links.show {
+    right: 0;
   }
-  
-  /* Hamburger icon */
+
   .hamburger {
-    display: none;
-    font-size: 26px;
-    cursor: pointer;
+    display: block;
+    z-index: 1101;
   }
-  
-  /* Sidebar for mobile */
-  @media (max-width: 768px) {
-    .nav-links {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      height: 100vh;
-      width: 220px;
-      background: #fff3e6;
-      flex-direction: column;
-      align-items: start;
-      padding: 60px 20px;
-      gap: 25px;
-      transition: right 0.3s ease;
-      box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-      z-index: 1000;
-    }
-  
-    .nav-links.show {
-      right: 0;
-    }
-  
-    .hamburger {
-      display: block;
-      z-index: 1001;
-      color: #4b1e0e;
-    }
+}
+section {
+  scroll-margin-top: 90px;
+}
+
+
+/* ================= MOBILE SPACING FIX ================= */
+/* 🔥 THIS fixes large gaps on phone */
+@media (max-width: 600px) {
+  section,
+  .about,
+  .bookings-section,
+  .feedback-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
-  
 
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 
-
-
+  body {
+    font-size: 15px;
+  }
+}
