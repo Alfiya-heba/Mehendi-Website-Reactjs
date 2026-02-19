@@ -24,7 +24,7 @@ const About = () => {
             <li><strong>Creative & Neat Work:</strong> Detailed and symmetrical art.</li>
             <li><strong>Skin-Safe, Natural Cones:</strong> Rich color, zero harm.</li>
             <li><strong>Traditional Meets Trendy:</strong> Blending styles beautifully.</li>
-            <li><strong>Comfort of Home Service:</strong> I come to you.</li>
+            {/* <li><strong>Comfort of Home Service:</strong> I come to you.</li> */}
             <li><strong>Artist You Can Trust:</strong> Each design is made with heart.</li>
           </ul>
         </div>

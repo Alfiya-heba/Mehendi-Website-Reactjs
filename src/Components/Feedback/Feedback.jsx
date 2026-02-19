@@ -1,58 +1,70 @@
-import React, { useState } from 'react';
-import './Feedback.css';
+import React, { useState } from "react";
+import "./Feedback.css";
 
 const Feedback = () => {
-  const [result, setResult] = useState('');
+  const [name, setName] = useState("");
+  const [feedback, setFeedback] = useState("");
   const [showPopup, setShowPopup] = useState(false);
 
-  const onSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setResult('Sending...');
 
-    const formData = new FormData(e.target);
-    formData.append('access_key', import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
-    formData.append('subject', 'New Feedback Received from Mehendi Website');
-    formData.append('from_name', 'Mehendi by Heba - Feedback Form');
-
-    const res = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      body: formData
-    });
-
-    const data = await res.json();
-    if (data.success) {
-      setResult('Thank you for your feedback!');
-      e.target.reset();
-      setShowPopup(true);
-      setTimeout(() => {
-        setShowPopup(false);
-      }, 3000);
-    } else {
-      setResult('Something went wrong. Please try again.');
+    if (!name || !feedback) {
+      alert("Please fill all fields");
+      return;
     }
+
+    const message = `Hello Heba 💚
+I’d like to share my feedback for Mehendi by Heba.
+
+Name: ${name}
+
+Feedback:
+${feedback}`;
+
+    const whatsappNumber = "918431025128";
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+
+    setShowPopup(true);
+
+    setTimeout(() => {
+      window.open(whatsappURL, "_blank");
+      setShowPopup(false);
+    }, 1200);
   };
 
   return (
     <div className="feedback-section" id="feedback">
       <div className="feedback-container">
-        <h2>We’d Love Your Feedback 💬</h2>
-        <p>Your thoughts help us grow and improve. Share your experience with Mehendi by Heba!</p>
+        <h2>Share Your Feedback 💬</h2>
+        <p>Your words mean a lot to us. Thank you for choosing Mehendi by Heba 💚</p>
 
-        <form onSubmit={onSubmit} className="feedback-form">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" rows="5" placeholder="Your Feedback" required></textarea>
-          <button type="submit">Send Feedback</button>
+        <form onSubmit={handleSubmit} className="feedback-form">
+          <input
+            type="text"
+            placeholder="Your Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+
+          <textarea
+            rows="5"
+            placeholder="Write your feedback here..."
+            value={feedback}
+            onChange={(e) => setFeedback(e.target.value)}
+          ></textarea>
+
+          <button type="submit">Send Feedback on WhatsApp</button>
         </form>
-
-        {result && <div className="feedback-message">{result}</div>}
       </div>
 
       {showPopup && (
         <div className="popup-overlay">
           <div className="popup-box">
-            <h3>🎉 Thank you!</h3>
-            <p>Your feedback has been submitted successfully.</p>
+            <h3>💚 Thank you!</h3>
+            <p>Redirecting you to WhatsApp…</p>
           </div>
         </div>
       )}
